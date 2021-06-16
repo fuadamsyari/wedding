@@ -11,17 +11,24 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+      <!-- modal -->
+    <div class="col s12 center">
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content col s12 center">
+          <h5 class="kepada">Kpd Bpk/Ibu/Saudara/i Tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan Kami.</h5>
+          <br><br><br><br><br>
+          <button class="btn waves-effect waves-light close" type="button" >BUKA</button>
+        </div>
+      </div>
+    </div>
+
   <!-- navbar -->
   <nav class="white" role="">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">Abi dan Umi</a>
       <ul class="right hide-on-med-and-down">
-        <li>
-          <audio hidden autoplay="autoplay" loop>
-            <source src="audio.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-          </audio>
-        </li>
+        <li><a href="#">Share Link</a></li>
       </ul>
       <ul id="nav-mobile" class="side-nav">
         <li><a href="#">Share Link</a></li>
@@ -185,7 +192,39 @@
     
   </footer>
 
+    <!-- modal -->
+  <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
 
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      var audio = new Audio("audio.mp3");
+      // When the user clicks the button, open the modal 
+      window.onload = function() {
+        modal.style.display = "block";
+      }
+
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+        audio.play();
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+  
+  
+  
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
